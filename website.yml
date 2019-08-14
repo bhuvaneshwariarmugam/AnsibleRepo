@@ -3,10 +3,6 @@
   become: yes
   become_user: root
   tasks:
-  - name: ensure apache is at the latest version
-    yum: name=httpd state=latest
-  - name: start a httpd service
-    service: name=httpd state=started enabled=true
   - name: Git Clone
     git:
       repo: 'https://github.com/bhuvaneshwariarmugam/AnsibleRepo.git'
